@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Sidebar.css"; // Імпорт стилів для компонента Sidebar
 
 const Sidebar = ({categories, onSelectCategory}) => {
     return (

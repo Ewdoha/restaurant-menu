@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Footer.css";                                 // Імпорт стилів для компонента Footer
 
 const Footer = () => {                                          // Створення функціонального компонента Footer
     return (                                                   // Повертає JSX

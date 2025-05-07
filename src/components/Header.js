@@ -1,4 +1,5 @@
-import React from "react";                                                        // Імпорт бібліотеки React
+import React from "react";
+import "../styles/Header.css";                                                         // Імпорт бібліотеки React
 
 const Header = () => {                                                            // Створення функціонального компонента Header
   return (                                                                        // Повертає JSX
