@@ -1,31 +1,48 @@
-import React from "react";
-import dishes from "../data/dishes";            // Імпорт масиву страв з їх назвами та цінами dishes з файлу dishes.js
+// Menu.js
+import React, { useState } from "react";
+import dishes from "../data/dishes";
 import Sidebar from "./Sidebar";
-import "../styles/Menu.css";                // Імпорт стилів для компонента Menu                         
+import "../styles/Menu.css";
 
-const Menu = () => {                            // Створення функціонального компонента Menu
+const Menu = () => {
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedImage, setSelectedImage] = useState(null); // Стан для модального вікна
 
-    const [selectedCategory, setSelectedCategory] = React.useState(null); // Створення стану для вибраної категорії
+    const categories = [...new Set(dishes.map(dish => dish.category))];
 
-    const categories = [...new Set(dishes.map(dish => dish.category))]; // Отримання унікальних категорій з масиву страв
-                                     
-    return (                                                   // Повертає JSX
-        <div className="menu-container">                  {/*Контейнер для меню*/}
-            <Sidebar categories={categories} onSelectCategory={setSelectedCategory} /> {/*Бокова панель з категоріями*/}
-            <main>
-        
-                <ul>
-                    {dishes.filter(dish => !selectedCategory || dish.category === selectedCategory).map((dish, index) => (                 // Перебір масиву страв
-                        <li key={index}>
-                            {dish.image && <img src={dish.image} alt={dish.name} style={{width:'100px', height:'100px', objectFit: 'cover'}} /> }         {/*Створення списку <li>*/} 
-                            <strong>{dish.name}</strong> - {dish.amount}{dish.unit} - {dish.price} грн.      {/*Виведення назви страви та її ціни*/}
-                            <p className= "ingredients">{dish.ingredients}</p>
+    return (
+        <div className="menu-container"> {/* ЦЕЙ div ТЕПЕР ВНУТРІ main */}
+            <Sidebar categories={categories} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} />
+            <ul className="menu-list"> {/* Тепер menu-list безпосередньо в menu-container */}
+                {dishes
+                    .filter(dish => !selectedCategory || dish.category === selectedCategory)
+                    .map((dish, index) => (
+                        <li key={index} className="menu-item">
+                            <div className="menu-details">
+                                <strong className="dish-name">{dish.name}</strong>
+                                <p className="dish-price"><strong>{dish.price} грн.</strong></p>
+                                <p className="dish-description">{dish.ingredients || "Опис відсутній"}</p>
+                                <p className="dish-amount">{dish.amount}{dish.unit}</p>
+                            </div>
+                            {dish.image && (
+                                <img 
+                                    src={dish.image} 
+                                    alt={dish.name} 
+                                    onClick={() => setSelectedImage(dish.image)} // Відкриваємо модальне вікно
+                                />
+                            )}
                         </li>
                     ))}
-                </ul>
-            </main>
+            </ul>
+
+            {/* Модальне вікно для зображення */}
+            {selectedImage && (
+                <div className="modal" onClick={() => setSelectedImage(null)}>
+                    <img src={selectedImage} alt="Збільшене зображення" />
+                </div>
+            )}
         </div>
     );
-};                                                              // Створення функціонального компонента Menu
+};
 
-export default Menu;                                          // Експорт компонента Menu для використання в інших частинах програми
+export default Menu;

@@ -1,38 +1,106 @@
+/* App.css */
+
+/* Базові стилі та скидання */
+* {
+  box-sizing: border-box; 
+  margin: 0;
+  padding: 0;
+}
+
+/* Гарантуємо, що html, body та #root займають 100% висоти вікна */
+html, body, #root {
+  width: 100%; /* Встановлюємо ширину */
+  overflow-x: hidden; /* Запобігає горизонтальній прокрутці */
+  min-height: 100vh
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  /* Фонове зображення для всього body */
+  background-image: url("/public/images/background.jpg");
+  background-size: cover; 
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh; /* ЦЕ ВАЖЛИВО: App займає щонайменше 100% висоти вікна */
+  height: 100%; /* Додаємо height: 100% на випадок, якщо min-height: 100vh не повністю розтягує */
 }
 
-.App-link {
-  color: #61dafb;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+main {
+  flex-grow: 1; /* Дозволяє main займати весь доступний простір */
+  display: flex; /* Робимо main flex-контейнером */
+  justify-content: center; /* Центруємо вміст Menu по горизонталі */
+  align-items: stretch; /* Дозволяє дочірнім елементам (Menu) розтягуватися по висоті main */
+  height: 100%; /* Додаємо height: 100% для main, щоб він розтягував свій вміст */
+}
+
+/* --- Загальні медіа-запити для всього сайту --- */
+
+@media (max-width: 768px) {
+  html, body {
+    font-size: 15px; 
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 480px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+
+.scroll-to-top {
+  position: fixed; /* Фіксоване позиціонування відносно вікна */
+  bottom: 20px; /* Відступ від нижнього краю */
+  right: 20px; /* Відступ від правого краю */
+  background-color: #a5640d; /* Колір вашого бренду */
+  color: white;
+  border: none;
+  border-radius: 50%; /* Робимо кнопку круглою */
+  width: 50px; /* Ширина кнопки */
+  height: 50px; /* Висота кнопки */
+  font-size: 24px;
+  line-height: 50px; /* Вирівнюємо текст по центру */
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.8; /* Невелика прозорість */
+  transition: opacity 0.3s, background-color 0.3s, transform 0.3s; /* Плавні переходи */
+  z-index: 999; /* Забезпечуємо, щоб кнопка була поверх іншого контенту */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Легка тінь */
+}
+
+.scroll-to-top:hover {
+  opacity: 1;
+  background-color: #ff6600; /* Змінюємо колір при наведенні */
+  transform: translateY(-3px); /* Невеликий ефект підйому */
+}
+
+/* Для мобільних пристроїв зменшимо розмір кнопки */
+@media (max-width: 768px) {
+  .scroll-to-top {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    bottom: 15px;
+    right: 15px;
   }
 }

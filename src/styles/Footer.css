@@ -1,0 +1,104 @@
+
+
+.footer-container {
+  display: flex;
+  justify-content: space-around; /* Розподіляє простір між елементами */
+  padding: 40px 20px;
+  background-color: #f8f8f8; /* Легкий фон футера */
+  color: #333;
+  font-family: sans-serif;
+  flex-wrap: wrap; /* Дозволяє елементам переноситися на новий рядок на менших екранах */
+  gap: 20px; /* Відстань між секціями */
+}
+
+.footer-section {
+  flex: 1; /* Кожна секція займає рівну частку простору */
+  min-width: 250px; /* Мінімальна ширина секції, щоб уникнути занадто стиснутих блоків */
+  margin: 10px; /* Невеликий відступ для кращого вигляду */
+}
+
+.footer-section h3 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #555;
+  font-weight: 600;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  color: #007bff; /* Колір при наведенні */
+}
+
+.social-icon {
+  margin-right: 8px; /* Відступ між іконкою та текстом */
+  vertical-align: middle; /* Вирівнювання іконки по вертикалі з текстом */
+  font-size: 1.2em; /* Розмір іконки */
+  color: #555; /* Базовий колір іконки */
+}
+
+.footer-section a:hover .social-icon {
+  color: #007bff; /* Зміна кольору іконки при наведенні на посилання */
+}
+
+/* Стилізація секції з картою */
+.map-section {
+  flex: 2; /* Карта може займати більше місця */
+  min-width: 300px; /* Мінімальна ширина для карти */
+}
+
+.map-placeholder {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Висота карти */
+  border: 1px solid #ddd;
+  overflow: hidden; /* Щоб вміст карти не виходив за межі */
+}
+
+.map-placeholder iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* На малих екранах секції йдуть одна за одною */
+    align-items: center; /* Центруємо секції */
+  }
+
+  .footer-section {
+    width: 90%; /* Робіть секції ширшими на мобільних */
+    margin: 15px 0;
+    text-align: center; /* Центруємо текст */
+  }
+
+  .footer-section ul {
+    text-align: center; /* Центруємо списки */
+  }
+
+  .map-section {
+    width: 90%;
+  }
+}

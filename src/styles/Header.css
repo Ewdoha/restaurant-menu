@@ -1,0 +1,63 @@
+/* Header.css */
+.header {
+  background: #fdfcfc;
+  color: #020202;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px; /* Базовий розмір для великих екранів */
+  font-weight: bold;
+  border-bottom: 3px solid #a5640d;
+}
+
+.header:hover {
+  background: #f3f3f3;
+  transition: background 0.3s ease-in-out;
+}
+
+header h1 {
+  margin-bottom: 0;
+  font-size: 2.5em; /* Відносний розмір, наприклад, 2.5 рази від базового font-size хедера */
+}
+
+.header h2 {
+  margin: 0;
+  margin-bottom: 40px;
+  font-size: 1.2em; /* Відносний розмір */
+  color: #a5640d;
+}
+
+/* --- Адаптивність для менших екранів --- */
+
+/* Для планшетів (ширина до 768px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px; /* Зменшуємо padding */
+    font-size: 20px; /* Зменшуємо базовий font-size хедера */
+  }
+
+  .header h1 {
+    font-size: 2em; /* Зменшуємо розмір заголовка H1 */
+  }
+
+  .header h2 {
+    font-size: 1em; /* Зменшуємо розмір заголовка H2 */
+    margin-bottom: 20px; /* Зменшуємо відступ знизу */
+  }
+}
+
+/* Для мобільних телефонів (ширина до 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px; /* Ще більше зменшуємо padding */
+    font-size: 18px; /* Ще більше зменшуємо базовий font-size хедера */
+  }
+
+  .header h1 {
+    font-size: 1.5em; /* Ще більше зменшуємо розмір заголовка H1 */
+  }
+
+  .header h2 {
+    font-size: 0.9em; /* Ще більше зменшуємо розмір заголовка H2 */
+    margin-bottom: 15px; /* Ще більше зменшуємо відступ знизу */
+  }
+}
