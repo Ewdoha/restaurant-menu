@@ -10,10 +10,16 @@ import dishesData from "../data"; // Або "../data/index", але index.js і�
 const Menu = () => {
 
     // dishesData - це вже об'єднаний масив з усіх категорій
+
+    // !!!!!! вимкнув правило ESlint для цього конкретного рядка
+    // eslint-disable-next-line no-unused-vars 
     const [dishes, setDishes] = useState(dishesData); 
     
     // Отримуємо унікальні категорії з імпортованих даних
     const uniqueCategories = [...new Set(dishesData.map(dish => dish.category))];
+
+    // !!!!!! вимкнув правило ESlint для цього конкретного рядка
+    // eslint-disable-next-line no-unused-vars
     const [categories, setCategories] = useState(uniqueCategories);
 
     const [selectedCategory, setSelectedCategory] = useState(null);
