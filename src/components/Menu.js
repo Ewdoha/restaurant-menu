@@ -1,18 +1,32 @@
 // Menu.js
 import React, { useState } from "react";
-import dishes from "../data/dishes";
 import Sidebar from "./Sidebar";
 import "../styles/Menu.css";
+// Тепер імпортуємо об'єднаний масив з src/data/index.js
+import dishesData from "../data"; // Або "../data/index", але index.js імпортується за замовчуванням
+
+
 
 const Menu = () => {
-    const [selectedCategory, setSelectedCategory] = useState(null);
-    const [selectedImage, setSelectedImage] = useState(null); // Стан для модального вікна
 
-    const categories = [...new Set(dishes.map(dish => dish.category))];
+    // dishesData - це вже об'єднаний масив з усіх категорій
+    const [dishes, setDishes] = useState(dishesData); 
+    
+    // Отримуємо унікальні категорії з імпортованих даних
+    const uniqueCategories = [...new Set(dishesData.map(dish => dish.category))];
+    const [categories, setCategories] = useState(uniqueCategories);
+
+    const [selectedCategory, setSelectedCategory] = useState(null);
+    const [selectedImage, setSelectedImage] = useState(null);
+
 
     return (
-        <div className="menu-container"> {/* ЦЕЙ div ТЕПЕР ВНУТРІ main */}
-            <Sidebar categories={categories} selectedCategory={selectedCategory} onSelectCategory={setSelectedCategory} />
+        <div className="menu-container"> {/* ЦЕЙ div тепер всередині main */}
+            <Sidebar 
+                categories={categories} 
+                selectedCategory={selectedCategory} 
+                onSelectCategory={setSelectedCategory} 
+            />
             <ul className="menu-list"> {/* Тепер menu-list безпосередньо в menu-container */}
                 {dishes
                     .filter(dish => !selectedCategory || dish.category === selectedCategory)
