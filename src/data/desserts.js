@@ -133,9 +133,7 @@ const desserts = [
         price: 180, 
         image: "",
         ingredients: ''  
-    },
-
-    
+    }, 
 
 ];
 
