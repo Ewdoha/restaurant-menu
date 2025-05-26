@@ -1,7 +1,7 @@
 const quicheLorraine = [
 
     { name: "Кіш лорен з куркою та печерицями", 
-        category: 'Кіш лорен', 
+        category: 'Кіш лорен (гаряча закуска)', 
         unit: ' г', 
         amount: 550, 
         price: 380, 
@@ -9,14 +9,15 @@ const quicheLorraine = [
     },
 
     { name: "Кіш лорен з сьомгою , грушею та сиром брі", 
-        category: 'Кіш лорен', unit: ' г', 
+        category: 'Кіш лорен (гаряча закуска)', 
+        unit: ' г', 
         amount: 450, 
         price: 440, 
         image: "/images/Kish_Loren_z_somgoyu_hrusheyu_ta_syrom_bri.jpg" 
     },
 
     { name: "Кіш лорен з морепродуктами", 
-        category: 'Кіш лорен', 
+        category: 'Кіш лорен (гаряча закуска)', 
         unit: ' г', 
         amount: 550, 
         price: 420, 
