@@ -1,29 +1,60 @@
 const quicheLorraine = [
 
-    { name: "Кіш лорен з куркою та печерицями", 
-        category: 'Кіш лорен (гаряча закуска)', 
+    { name: "З куркою та печерицями", 
+        category: 'Кіш лорен',
+        subCategory: '(гаряча закуска)', 
         unit: ' г', 
         amount: 550, 
-        price: 380, 
+        price: 400, 
         image: "/images/Kish_Loren_z_kurkoyu_ta_pecherytsyamy.jpg" 
     },
 
-    { name: "Кіш лорен з сьомгою , грушею та сиром брі", 
-        category: 'Кіш лорен (гаряча закуска)', 
+    { name: "З морепродуктами", 
+        category: 'Кіш лорен',
+        subCategory: '(гаряча закуска)', 
+        unit: ' г', 
+        amount: 550, 
+        price: 430, 
+        image: "/images/Kish_Loren_z_moreproduktamy.jpg" 
+    },
+
+
+    { name: "З сьомгою , грушею та сиром брі", 
+        category: 'Кіш лорен',
+        subCategory: '(гаряча закуска)', 
         unit: ' г', 
         amount: 450, 
         price: 440, 
         image: "/images/Kish_Loren_z_somgoyu_hrusheyu_ta_syrom_bri.jpg" 
     },
 
-    { name: "Кіш лорен з морепродуктами", 
-        category: 'Кіш лорен (гаряча закуска)', 
+    { name: "3 білими грибами та печерицями", 
+        category: 'Кіш лорен',
+        subCategory: '(гаряча закуска)', 
         unit: ' г', 
-        amount: 550, 
-        price: 420, 
-        image: "/images/Kish_Loren_z_moreproduktamy.jpg" 
+        amount: 600, 
+        price: 400, 
+        image: "" 
     },
 
+    { name: "3 бананом, чорницею та бізе", 
+        category: 'Кіш лорен',
+        subCategory: '(гаряча закуска)', 
+        unit: ' г', 
+        amount: 600, 
+        price: 320, 
+        image: "" 
+    },
+
+    { name: "3 персиком та сиром брі", 
+        category: 'Кіш лорен',
+        subCategory: '(гаряча закуска)', 
+        unit: ' г', 
+        amount: 650, 
+        price: 380, 
+        image: "" 
+    },
+   
 ];
 
 export default quicheLorraine;

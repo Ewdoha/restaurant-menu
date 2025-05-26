@@ -1,43 +1,40 @@
-// Menu.js
 import React, { useState } from "react";
 import Sidebar from "./Sidebar";
 import "../styles/Menu.css";
-// Тепер імпортуємо об'єднаний масив з src/data/index.js
-import dishesData from "../data"; // Або "../data/index", але index.js імпортується за замовчуванням
-
-
+import dishesData from "../data";
 
 const Menu = () => {
+    const dishes = dishesData;
 
-    // dishesData - це вже об'єднаний масив з усіх категорій
+    // Створіть масив унікальних повних назв категорій для відображення у Sidebar
+    // Тепер ми комбінуємо category та subCategory, якщо subCategory існує
+    const displayCategories = [...new Set(dishesData.map(dish => {
+        if (dish.subCategory) {
+            return `${dish.category} ${dish.subCategory}`; // Комбінуємо "Кіш лорен (гаряча закуска)"
+        }
+        return dish.category; // Для інших категорій залишаємо як є
+    }))];
 
-    // !!!!!! вимкнув правило ESlint для цього конкретного рядка
+    // !!!!! вимкнув правило ESlint для цього конкретного рядка
     // eslint-disable-next-line no-unused-vars 
-    const [dishes, setDishes] = useState(dishesData); 
-    
-    // Отримуємо унікальні категорії з імпортованих даних
-    const uniqueCategories = [...new Set(dishesData.map(dish => dish.category))];
-
-    // !!!!!! вимкнув правило ESlint для цього конкретного рядка
-    // eslint-disable-next-line no-unused-vars
-    const [categories, setCategories] = useState(uniqueCategories);
+    const [categories, setCategories] = useState(displayCategories); // Використовуємо displayCategories
 
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [selectedImage, setSelectedImage] = useState(null);
 
-
     return (
-        <div className="menu-container"> {/* ЦЕЙ div тепер всередині main */}
+        <div className="menu-container">
             <Sidebar 
-                categories={categories} 
+                categories={categories} // Передаємо скомбіновані категорії
                 selectedCategory={selectedCategory} 
                 onSelectCategory={setSelectedCategory} 
             />
-            <ul className="menu-list"> {/* Тепер menu-list безпосередньо в menu-container */}
+            <ul className="menu-list">
                 {dishes
-                    .filter(dish => !selectedCategory || dish.category === selectedCategory)
-                    .map((dish, index) => (
-                        <li key={index} className="menu-item">
+                    // Важливо: фільтруємо все ще за dish.category, бо це основна категорія для фільтрації
+                    .filter(dish => !selectedCategory || dish.category === selectedCategory || `${dish.category} ${dish.subCategory || ''}`.trim() === selectedCategory)
+                    .map((dish) => (
+                        <li key={dish.id} className="menu-item">
                             <div className="menu-details">
                                 <strong className="dish-name">{dish.name}</strong>
                                 <p className="dish-price"><strong>{dish.price} грн.</strong></p>
@@ -48,14 +45,13 @@ const Menu = () => {
                                 <img 
                                     src={dish.image} 
                                     alt={dish.name} 
-                                    onClick={() => setSelectedImage(dish.image)} // Відкриваємо модальне вікно
+                                    onClick={() => setSelectedImage(dish.image)} 
                                 />
                             )}
                         </li>
                     ))}
             </ul>
 
-            {/* Модальне вікно для зображення */}
             {selectedImage && (
                 <div className="modal" onClick={() => setSelectedImage(null)}>
                     <img src={selectedImage} alt="Збільшене зображення" />
