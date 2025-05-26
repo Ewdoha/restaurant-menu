@@ -54,6 +54,15 @@ const quicheLorraine = [
         price: 380, 
         image: "" 
     },
+
+    { name: "З шпинатом горбушею і кедровими горіхами", 
+        category: 'Кіш лорен',
+        subCategory: '(гаряча закуска)', 
+        unit: ' г', 
+        amount: 550, 
+        price: 400, 
+        image: "" 
+    },
    
 ];
 
