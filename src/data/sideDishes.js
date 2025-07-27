@@ -4,7 +4,7 @@ const sideDishes = [
         category: 'Гарніри', 
         unit: ' г', 
         amount: 200, 
-        price: 70, 
+        price: 80, 
         image: "",
         ingredients: '' 
     },
@@ -49,7 +49,7 @@ const sideDishes = [
         category: 'Гарніри', 
         unit: ' г', 
         amount: 280, 
-        price: 70, 
+        price: 80, 
         image: "",
         ingredients: '' 
     },
@@ -67,7 +67,7 @@ const sideDishes = [
         category: 'Гарніри', 
         unit: ' г', 
         amount: 370, 
-        price: 250, 
+        price: 280, 
         image: "",
         ingredients: '' 
     },
@@ -76,7 +76,7 @@ const sideDishes = [
         category: 'Гарніри', 
         unit: ' г', 
         amount: 'за 100', 
-        price: 28, 
+        price: 30, 
         image: "",
         ingredients: '' 
     },
@@ -112,7 +112,7 @@ const sideDishes = [
         category: 'Гарніри', 
         unit: ' г', 
         amount: 250, 
-        price: 120, 
+        price: 150, 
         image: "",
         ingredients: '(горошок зелений, кукурудза, рис, масло)' 
     },
@@ -121,7 +121,7 @@ const sideDishes = [
         category: 'Гарніри', 
         unit: ' г', 
         amount: 220, 
-        price: 220, 
+        price: 280, 
         image: "",
         ingredients: '(рис арбаріо, вершки, вино біле, креветки, яйце, сир пармезан)' 
     },
@@ -130,7 +130,7 @@ const sideDishes = [
         category: 'Гарніри', 
         unit: ' г', 
         amount: 220, 
-        price: 180, 
+        price: 250, 
         image: "",
         ingredients: '(рис арбаріо, перець болгарський, морква, кукурудза с/м, квасоля стручкова, сир пармезан, вершки)' 
     },

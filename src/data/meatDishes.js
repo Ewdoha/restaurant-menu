@@ -5,7 +5,7 @@ const meatDishes = [
         unit: ' г', 
         amount: 1400, 
         price: 1400, 
-        image: "",
+        image: "/images/miatsna_tarylka.jpg",
         ingredients: '(медальйони з свинини під вишневим соусом, курячі бедра з карамелізованим яблуком, ребра з сацебелі, соус барбекю, ковбаски гриль)'  
     },
 
@@ -31,7 +31,7 @@ const meatDishes = [
         category: `Страви з м'яса`, 
         unit: ' г', 
         amount: 150, 
-        price: 130, 
+        price: 180, 
         image: "",
         ingredients: ''  
     },
@@ -40,7 +40,7 @@ const meatDishes = [
         category: `Страви з м'яса`, 
         unit: ' г', 
         amount: '130/30', 
-        price: 230, 
+        price: 280, 
         image: "",
         ingredients: ''  
     },
@@ -49,7 +49,7 @@ const meatDishes = [
         category: `Страви з м'яса`, 
         unit: ' г', 
         amount: 900, 
-        price: 1000, 
+        price: 1100, 
         image: "",
         ingredients: '(курячі, телячі, свинні) подається з бататом на подушці з карамелізованого буряка'  
     },
@@ -76,7 +76,7 @@ const meatDishes = [
         category: `Страви з м'яса`, 
         unit: ' г', 
         amount: 350, 
-        price: 230, 
+        price: 350, 
         image: "",
         ingredients: ''  
     },
@@ -139,7 +139,7 @@ const meatDishes = [
         category: `Страви з м'яса`, 
         unit: ' г', 
         amount: 180, 
-        price: 250, 
+        price: 350, 
         image: "",
         ingredients: ''  
     },
@@ -157,7 +157,7 @@ const meatDishes = [
         category: `Страви з м'яса`, 
         unit: ' г', 
         amount: 120, 
-        price: 120, 
+        price: 190, 
         image: "",
         ingredients: ''  
     },
@@ -166,8 +166,8 @@ const meatDishes = [
         category: `Страви з м'яса`, 
         unit: ' г', 
         amount: 480, 
-        price: 300, 
-        image: "",
+        price: 350, 
+        image: "/images/kurka_kapreze.jpg",
         ingredients: ''  
     },
 
@@ -175,7 +175,7 @@ const meatDishes = [
         category: `Страви з м'яса`, 
         unit: ' г', 
         amount: 180, 
-        price: 180, 
+        price: 200, 
         image: "",
         ingredients: ''  
     },
@@ -184,7 +184,7 @@ const meatDishes = [
         category: `Страви з м'яса`, 
         unit: ' г', 
         amount: 180, 
-        price: 160, 
+        price: 200, 
         image: "",
         ingredients: ''  
     },
@@ -202,7 +202,7 @@ const meatDishes = [
         category: `Страви з м'яса`, 
         unit: ' г', 
         amount: 220, 
-        price: 280, 
+        price: 300, 
         image: "",
         ingredients: ''  
     },

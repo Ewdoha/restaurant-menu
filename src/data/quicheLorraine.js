@@ -14,7 +14,7 @@ const quicheLorraine = [
         subCategory: '(гаряча закуска)', 
         unit: ' г', 
         amount: 550, 
-        price: 430, 
+        price: 450, 
         image: "/images/Kish_Loren_z_moreproduktamy.jpg" 
     },
 

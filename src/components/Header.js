@@ -1,13 +1,19 @@
 import React from "react";
-import "../styles/Header.css";                                                         // Імпорт бібліотеки React
+import "../styles/Header.css";
 
-const Header = () => {                                                            // Створення функціонального компонента Header
-  return (                                                                        // Повертає JSX
-    <header className="header">                                                   {/*Головний елемент заголовка*/}
-      <h1>БурЖуй</h1>
-      <h2>ресторація</h2>                                                         {/*Заголовок сайту*/}
+const Header = () => {
+  return (
+    <header className="header">
+      <h1>
+        {/* Логотип, який знаходиться в папці `public` */}
+        <img
+          src="/burjui_logo.png" // Шлях до вашого логотипу
+          alt="Логотип Ресторану Буржуй" // Опис для доступності
+          className="header-logo" // Клас для стилізації
+        />
+      </h1>
     </header>
   );
 }
 
-export default Header;                                                             // Експорт компонента Header для використання в інших частинах програми
+export default Header;

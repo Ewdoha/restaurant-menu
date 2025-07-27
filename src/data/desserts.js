@@ -36,11 +36,11 @@ const desserts = [
         ingredients: ''  
     },
     
-    { name: "Млинці вишиванка", 
+    { name: "Млинці «Вишиванка»", 
         category: 'Десерти', 
         unit: ' г', 
         amount: 220, 
-        price: 220, 
+        price: 280, 
         image: "/images/Mlyntsi_Vyshyvanka.jpg",
         ingredients: '(маскарпоне, мак, вишня)' 
     },

@@ -6,7 +6,7 @@ const coldSnacks = [
         unit: ' шт', 
         amount: 5, 
         price: 290, 
-        image: "",
+        image: "/images/profitroli_z_krevetkamy.jpg",
         ingredients: '' 
     },
 
@@ -186,7 +186,7 @@ const coldSnacks = [
         unit: ' г', 
         amount: 410, 
         price: 290, 
-        image: "", 
+        image: "/images/miasne_zalyvne.jpg", 
         ingredients: '(свинина, телятина, курка, помідори, маслини, зелень)'
     },
 
@@ -222,7 +222,7 @@ const coldSnacks = [
         unit: ' г', 
         amount: '400/50', 
         price: 390, 
-        image: "/images/Myasne_asorti.jpg", 
+        image: "", 
         ingredients: '(ковбаса домашня, буженина печена, бочок печений, рулет з сиром, хрін)'
     },
 

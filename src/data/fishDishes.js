@@ -23,7 +23,7 @@ const fishDishes = [
         unit: ' г', 
         amount: 220, 
         price: 280, 
-        image: "",
+        image: "/images/skumbriia_po_sytsyliisky.jpg",
         ingredients: '(скумбрія, помідори, печериці, перець болгарський, зелень)' 
     },
 

@@ -22,7 +22,7 @@ const hotDishes = [
         category: 'Гарячі страви', 
         unit: ' г', 
         amount: 300, 
-        price: 170, 
+        price: 250, 
         image: "",
         ingredients: '(філе курки, печериці, вершки, сир твердий, цибуля)' 
     },
@@ -58,7 +58,7 @@ const hotDishes = [
         category: 'Гарячі страви', 
         unit: ' г', 
         amount: 300, 
-        price: 150, 
+        price: 200, 
         image: "",
         ingredients: '' 
     },
@@ -67,7 +67,7 @@ const hotDishes = [
         category: 'Гарячі страви', 
         unit: ' г', 
         amount: 300, 
-        price: 160, 
+        price: 200, 
         image: "",
         ingredients: '' 
     },
@@ -94,7 +94,7 @@ const hotDishes = [
         category: 'Гарячі страви', 
         unit: ' г', 
         amount: 190, 
-        price: 180, 
+        price: 200, 
         image: "",
         ingredients: '' 
     },
@@ -112,7 +112,7 @@ const hotDishes = [
         category: 'Гарячі страви', 
         unit: ' г', 
         amount: 220, 
-        price: 200, 
+        price: 220, 
         image: "",
         ingredients: '' 
     },
@@ -130,7 +130,7 @@ const hotDishes = [
         category: 'Гарячі страви', 
         unit: ' г', 
         amount: 300, 
-        price: 300, 
+        price: 350, 
         image: "/images/Kuryachyi_rulet_z_vyalenymy_tomatamy_shpynatom_ta_syrom_dorblyu.jpg",
         ingredients: '' 
     },
@@ -139,7 +139,7 @@ const hotDishes = [
         category: 'Гарячі страви', 
         unit: ' г', 
         amount: 170, 
-        price: 140, 
+        price: 250, 
         image: "",
         ingredients: '' 
     },

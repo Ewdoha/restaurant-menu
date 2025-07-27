@@ -23,7 +23,7 @@ const salads = [
         unit: ' г', 
         amount: 220, 
         price: 220, 
-        image: "", 
+        image: "/images/salat_tuno.jpg", 
         ingredients: `(тунець, яйце, морква варена, картопля варена, свіжий огірок, ікра мойв, майонез)`
     },
 
@@ -121,7 +121,7 @@ const salads = [
         category: 'Салати', 
         unit: ' г', 
         amount: 200, 
-        price: 240, 
+        price: 260, 
         image: "/images/Salat_z_avokado_ta_krevetkamy.jpg",
         ingredients: '(креветки, пармезан, черрі, мікс салату, кунжутний соус, авокадо, часник, зелень)'  
     },
@@ -139,7 +139,7 @@ const salads = [
         category: 'Салати', 
         unit: ' г', 
         amount: 220, 
-        price: 180, 
+        price: 200, 
         image: "",
         ingredients: "(язик, печериці мариновані, огірок солений, яйце, сир твердий, горошок зелений, майонез)"  
     },
@@ -193,7 +193,7 @@ const salads = [
         category: 'Салати', 
         unit: ' г', 
         amount: 250, 
-        price: 200, 
+        price: 220, 
         image: "/images/Salat_z_telyatyny_ta_brynzy.jpg" 
     },
 
@@ -228,7 +228,7 @@ const salads = [
         category: 'Салати', 
         unit: ' г', 
         amount: 230, 
-        price: 230, 
+        price: 250, 
         image: "/images/Salat_Teplyi_vid_shefa.jpg",
         ingredients: `(свинина, телятина, огірок солений, перець болгарський, яблуко, цибуля синя, печериці мариновані, соус "Цезар", листя салату, бальзамічний соус)`  
     },
