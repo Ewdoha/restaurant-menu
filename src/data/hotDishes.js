@@ -117,6 +117,15 @@ const hotDishes = [
         ingredients: '' 
     },
 
+    {   name: "Млинці з сомом", 
+        category: 'Гарячі страви', 
+        unit: ' г', 
+        amount: '170/45', 
+        price: 260, 
+        image: "/images/mlyntsi_z_somom.jpg",
+        ingredients: '' 
+    },
+
     { name: "Картопляні ньокі з соусом з білих грибів", 
         category: 'Гарячі страви', 
         unit: ' г', 
